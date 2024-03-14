@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a Shark</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Normalize and Styles -->
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+
+</head>
+<body>
+    <div id="pop-up-window">
+        <div id="pop-up-text">
+        <h2>Welcome to Whack-a-Shark!</h2>
+        <p>Every time the shark appears, click on him to earn 10 points.</p>
+        <p>You have 60 seconds!</p>
+        <button id="open-game-btn">Play Now</button>
+        </div>
+    </div>
+
+
+<div id="game-window">
+    <header>
+        <h1>Whack-a-Shark</h1>
+        <h1 class="wave">Whack-a-Shark</h1>
+        <div class="game-info">
+            <h3 class="score">Score: <span id="score-output">0</span></h3>
+            <h3 class="timer">Timer: <span id="timer-output">60</span></h3>
+        </div>
+    </header>
+        
+    <main>       
+        <button id="start-button">Start Game</button>
+        
+
+        <div class="game-container">
+            
+            <div id="message-game-over">
+                <h2>Game Over!</h2>
+                <p>Your Score Is: <span id="game-over-score">0</span></p>
+                <button id="game-over-button">OK</button>
+            </div>
+                
+            <div class="water" id="water1"></div>
+            <div class="water" id="water2"></div>
+            <div class="water" id="water3"></div>
+            <div class="water" id="water4"></div>
+            <div class="water" id="water5"></div>
+            <div class="water" id="water6"></div>          
+            <div class="water" id="water7"></div>
+            <div class="water" id="water8"></div>
+            <div class="water" id="water9"></div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;Kyle Thomson 2024</p>
+
+    </footer>
+</div>
+        
+   <script src="scripts/script.js"></script>
+</body>
+</html>

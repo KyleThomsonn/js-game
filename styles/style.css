@@ -1,0 +1,260 @@
+/* General styles */
+body {
+    font-family: 'Play', Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #f0f8ff;
+    background-image: url('../images/blue-water.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+ h1 {
+     position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5rem;
+    width: 100%;
+}
+
+@media (max-width: 80em) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 24.375rem) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+footer {
+    text-align: center;
+    margin: 2rem;
+}
+
+/* buttons */
+
+button {
+    display: block;
+    margin: 2rem auto;
+    background-color: #f0f8ff;
+    color: #333A73;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 15px;
+    text-transform: uppercase;
+
+}
+
+button:hover {
+    background-color: #333A73;
+    color: #f0f8ff;
+    transition: 0.5s;
+}
+
+@media (max-width: 30.625em) {
+    button {
+        margin: 1rem auto;
+        width: 8rem;
+        height: 2rem;
+    }
+}
+
+/* Score and Timer styles */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5rem 0;
+}
+
+.score, .timer {
+    padding: 1rem 1.5rem 1rem 1rem;
+    border-radius: 15px;
+    background-color: #f0f8ff;
+    color: #333A73;
+}
+
+@media (max-width: 30.625em) {
+    .score, .timer {
+        padding: .5rem 1rem .5rem .5rem;
+    }
+}
+
+/* Game board styles */
+.game-container {
+    width: 57rem;
+    height: 57rem;
+    background-color: #333A73;
+    border: 3px solid #ffffff;
+    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;   
+} 
+
+.water {
+   width: 300px;
+   height: 300px;
+   background-image: url("../images/water-for-game.svg");
+   background-size: cover;  
+}
+
+
+.shark {
+    width:250px;
+    height:250px;
+    background-image: url("../images/shark.svg");
+    cursor: pointer;
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+@media (max-width: 120em) {
+    .game-container {
+        width: 42rem;
+        height: 42rem;
+    }
+    .water {
+        width: 210px;
+        height: 210px;
+    }
+    .shark {
+        width: 150px;
+        height: 150px;
+        top: 40px;
+        left: 30px;
+    }
+}
+
+@media (max-width: 80em) {
+    .game-container {
+        width: 35rem;
+        height: 35rem;
+    }
+    .water {
+       width: 180px; 
+       height: 180px; 
+    }
+    .shark {
+        top: 25px;
+        left: 15px;
+
+    }
+} 
+
+@media (max-width: 24.375em) {
+    .game-container {
+        width: 18rem;
+        height: 18rem;
+    }
+    .water {
+        width: 90px;
+        height: 90px;
+    }
+    .shark {
+        width: 60px;
+        height: 60px;
+        top: 25px;
+        left: 15px;
+    }
+}
+
+
+/* Game over Message Styles */
+#message-game-over {
+    position:absolute;
+    padding: 2em 10rem;
+    background-color: #ffffff;
+    color: #333A73;
+    z-index: 10;
+    border-radius: 15px;
+    align-items: center;
+    top: 35%;
+    border: 5px solid #2BAECC;
+    display: none;
+}
+
+
+#message-game-over h2 {
+    text-align: center;
+    color: C51605;
+}
+
+#game-over-score {
+    font-size: 3rem;
+    padding-left: .5rem;
+    color: #C51605;
+}
+
+/* Animation for header // Code idea from codepen */
+
+.wave {
+	color: #333A73;
+	animation: wave 2.5s ease-in-out infinite;
+    position: absolute;
+    top: 0;     
+}
+
+@keyframes wave {
+	0%, 100% {
+		clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+	}
+
+	50% {
+		clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+	}
+}
+
+/* Window displays */
+
+#game-window {
+    animation: transitionPage 1.5s;
+    display: none;
+}
+
+#pop-up-window {
+    height: 100vh;
+    background-image: url('../images/shark-background.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+#pop-up-text {
+    width: 30rem;
+    height: 18rem;
+    background-color: #ffffff;
+    color: #333A73;
+    padding: 1rem;
+    margin: 0 auto;
+    border: 3px solid #2BAECC;
+    border-radius: 20px;
+    text-align: center;
+}
+
+@media (max-width: 30.625em) {
+    #pop-up-text {
+        margin: 1rem;
+    }
+}
+
+@keyframes transitionPage {
+    from {
+        opacity: 0;
+        transform: rotateX('-10deg');
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX('0');
+    }
+}
+
