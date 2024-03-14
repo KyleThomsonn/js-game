@@ -7,8 +7,7 @@ body {
     color: #f0f8ff;
     background-image: url('../images/blue-water.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;       
 }
 
  h1 {
@@ -24,7 +23,7 @@ body {
         font-size: 3rem;
     }
 }
-@media (max-width: 24.375rem) {
+@media (max-width: 24.375em) {
     h1 {
         font-size: 2rem;
     }
@@ -191,6 +190,12 @@ button:hover {
     font-size: 3rem;
     padding-left: .5rem;
     color: #C51605;
+}
+
+@media (max-width: 120rem) {
+    #message-game-over {
+        top: 25%;
+    }
 }
 
 /* Animation for header // Code idea from codepen */
