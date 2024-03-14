@@ -58,8 +58,6 @@ button:hover {
 @media (max-width: 30.625em) {
     button {
         margin: 1rem auto;
-        width: 8rem;
-        height: 2rem;
     }
 }
 

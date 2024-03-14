@@ -108,6 +108,9 @@ function whackShark(event) {
     if (event.target.classList.contains('shark')) {
         scoreResult += 10;
         scoreOutput.textContent = scoreResult;
+
+        scoreAudio.pause();
+        scoreAudio.currentTime = 0;
         scoreAudio.play();
     }
 };
