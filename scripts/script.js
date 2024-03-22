@@ -95,7 +95,7 @@ function randomHole(){
 
 // Set shark position on a timer
 function moveShark() {
-    sharkTimerId = setInterval(randomHole, 520)
+    sharkTimerId = setInterval(randomHole, 560)
 };
 
 
